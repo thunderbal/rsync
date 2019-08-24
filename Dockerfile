@@ -1,7 +1,6 @@
-FROM debian:jessie-slim
-MAINTAINER	thunderball
+FROM debian:stable-slim
 
 RUN apt-get update && apt-get install -y rsync openssh-client
 
-ENTRYPOINT ["/bin/bash"]
-
+CMD ["--help"]
+ENTRYPOINT ["/usr/bin/rsync"]
